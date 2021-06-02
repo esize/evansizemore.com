@@ -37,29 +37,12 @@ export default function Home() {
         </Box>
         <Spacer />
         <Box>
-          <Center>
-            {/* <Image
-              src='/evan.jpg'
-              boxSize={[180, 200, 300, 350]}
-              borderRadius='full'
-              fit='cover'
-            ></Image> */}
-            <Box
-              position='relative'
-              width='fit-content'
-              height='fit-content'
-              borderRadius='full'
-              overflow='hidden'
-            >
-              <Image
-                src='/evan.jpg'
-                width={350}
-                height={350}
-                objectFit='cover'
-                alt='An image of Evan Sizemore'
-              />
-            </Box>
-          </Center>
+          <Image
+            src='/evan.jpg'
+            width={350}
+            height={350}
+            className='roundedImage'
+          />
         </Box>
       </Flex>
     </Container>

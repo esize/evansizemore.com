@@ -2,6 +2,8 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 import theme from '../theme';
 
+import '../theme/round.css';
+
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
