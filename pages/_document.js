@@ -6,14 +6,14 @@ class MyDocument extends Document {
         <Head>
           <link
             rel='preload'
-            href='/fonts/spectral-v7-latin500.woff2'
+            href='../fonts/spectral-v7-latin500.woff2'
             as='font'
             type='font/woff2'
             crossOrigin='anonymous'
           />
           <link
             rel='preload'
-            href='/fonts/spectral-v7-latin700.woff2'
+            href='../fonts/spectral-v7-latin700.woff2'
             as='font'
             type='font/woff2'
             crossOrigin='anonymous'

@@ -56,6 +56,7 @@ export default function Home() {
                 width={350}
                 height={350}
                 objectFit='cover'
+                alt='An image of Evan Sizemore'
               />
             </Box>
           </Center>
