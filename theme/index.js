@@ -18,15 +18,6 @@ const theme = extendTheme({
       500: '#C43E49',
     },
   },
-  components: {
-    Heading: {
-      sizes: {
-        '4xl': {
-          fontSize: '96px',
-        },
-      },
-    },
-  },
 });
 
 export default theme;
