@@ -7,8 +7,10 @@ import {
   Spacer,
   Container,
   Center,
-  Image,
+  Circle,
 } from '@chakra-ui/react';
+
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -36,12 +38,26 @@ export default function Home() {
         <Spacer />
         <Box>
           <Center>
-            <Image
+            {/* <Image
               src='/evan.jpg'
               boxSize={[180, 200, 300, 350]}
               borderRadius='full'
               fit='cover'
-            ></Image>
+            ></Image> */}
+            <Box
+              position='relative'
+              width='fit-content'
+              height='fit-content'
+              borderRadius='full'
+              overflow='hidden'
+            >
+              <Image
+                src='/evan.jpg'
+                width={350}
+                height={350}
+                objectFit='cover'
+              />
+            </Box>
           </Center>
         </Box>
       </Flex>
