@@ -10,17 +10,26 @@ import {
 
 const AngledContainer = () => {
   return (
-    <Box backgroundColor='#963038' borderTop='8px #963038 solid' pb='36'>
-      <Container maxW='container.xl'>
+    <Box
+      backgroundColor='#963038'
+      borderTop='8px #963038 solid'
+      pb={['8', '8', '36']}
+    >
+      <Container
+        maxW='container.xl'
+        pr={['10', '10', '0']}
+        pl={['10', '10', '0']}
+      >
         <Flex>
           <Spacer></Spacer>
           <Heading
-            fontSize='6xl'
+            fontSize={['5xl', '5xl', '6xl']}
             maxW='container.md'
             as='h2'
             textAlign='right'
             fontWeight='700'
-            mb='20'
+            mb={['12', '12', '20']}
+            mt={['10', '10', '0']}
           >
             <i>
               Can’t anyone <br />
