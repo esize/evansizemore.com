@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.3.0",
     "axios": "^0.21.1",
     "framer-motion": "^4.1.17",
+    "googleapis": "^76.0.0",
     "next": "10.2.3",
     "nodemailer": "^6.6.1",
     "react": "17.0.2",
