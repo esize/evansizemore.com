@@ -43,7 +43,7 @@ export default function Home() {
                 <Button
                   fontSize='xl'
                   fontWeight='bold'
-                  bgColor='brand.500'
+                  colorScheme='mojo'
                   paddingX='10'
                   paddingY='8'
                 >
@@ -176,7 +176,7 @@ export default function Home() {
               <Button
                 fontSize='xl'
                 fontWeight='bold'
-                bgColor='brand.500'
+                colorScheme='mojo'
                 paddingX='10'
                 paddingY='8'
               >

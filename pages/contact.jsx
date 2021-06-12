@@ -7,6 +7,7 @@ import {
   Input,
   Button,
   Textarea,
+  useToast,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
@@ -18,10 +19,12 @@ export default function Contact() {
     formState: { errors, isSubmitting },
   } = useForm();
 
+  const toast = useToast();
+
   async function onSubmitForm(values) {
     let config = {
       method: 'post',
-      url: 'http://localhost:3000/api/contact',
+      url: `/api/contact`,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -30,13 +33,14 @@ export default function Contact() {
 
     try {
       const response = await axios(config);
-      console.log(response);
       if (response.status == 200) {
+        toast({
+          title: 'Submitted!',
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        });
         reset();
-        toast(
-          'success',
-          'Thank you for contacting us, we will be in touch soon.'
-        );
       }
     } catch (err) {}
   }
@@ -48,8 +52,10 @@ export default function Contact() {
       </Heading>
 
       <form onSubmit={handleSubmit(onSubmitForm)}>
-        <FormControl isInvalid={errors.name}>
-          <FormLabel htmlFor='name'>Name</FormLabel>
+        <FormControl isInvalid={errors.name} mb='5'>
+          <FormLabel htmlFor='name' fontSize='lg' fontWeight='bold'>
+            Name
+          </FormLabel>
           <Input
             id='name'
             placeholder='Full Name'
@@ -59,8 +65,10 @@ export default function Contact() {
             {errors.name && errors.name.message}
           </FormErrorMessage>
         </FormControl>
-        <FormControl isInvalid={errors.email}>
-          <FormLabel htmlFor='email'>Email</FormLabel>
+        <FormControl isInvalid={errors.email} mb='5'>
+          <FormLabel htmlFor='email' fontSize='lg' fontWeight='bold'>
+            Email
+          </FormLabel>
           <Input
             id='email'
             placeholder='Email'
@@ -85,9 +93,12 @@ export default function Contact() {
           </FormErrorMessage>
         </FormControl>
         <FormControl isInvalid={errors.message}>
-          <FormLabel htmlFor='message'>Message</FormLabel>
+          <FormLabel htmlFor='message' fontSize='lg' fontWeight='bold'>
+            Message
+          </FormLabel>
           <Textarea
             id='message'
+            size='lg'
             placeholder='Write your message here...'
             {...register('message', {
               required: 'You must enter a message',
@@ -111,7 +122,7 @@ export default function Contact() {
           type='submit'
           fontSize='xl'
           fontWeight='bold'
-          bgColor='brand.500'
+          colorScheme='mojo'
           paddingX='10'
           paddingY='8'
         >
